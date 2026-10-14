@@ -111,17 +111,33 @@ window.YJ_APPS = [
     id: "baro-barcode",
     platform: "android",
     category: "app",
-    icon: "▦",
-    color: ["#0f172a", "#334155"],
-    // TODO: package id, icon, privacy URL and store description
+    icon: "assets/icons/baro-barcode.png",
+    // Not live on Google Play yet — set to "https://play.google.com/store/apps/details?id=com.yjapps.barobarcode" once live
     url: "",
-    langs: ["ko"],
-    name: { ko: "바로 바코드", en: "Baro Barcode" },
+    privacy: "https://sites.google.com/view/yjapps3-barobarcode",
+    langs: ["ko", "en", "ja"],
+    name: { ko: "바로바코드", en: "BaroBarcode", ja: "BaroBarcode" },
     desc: {
-      ko: "바코드와 QR 코드를 카메라로 바로 스캔하는 간편 스캐너.",
-      en: "Scan barcodes and QR codes instantly with your camera.",
-      ja: "バーコードやQRコードをカメラですぐに読み取れるシンプルなスキャナー。",
-      zh: "用相機即時掃描條碼與 QR Code 的簡易掃描器。"
+      ko: "폰으로 찍으면 PC에 바로 입력! 바코드·QR 스캐너와 입고·출고·재고 조사까지.",
+      en: "Scan with your phone, type into your PC. Barcode & QR scanner with inventory.",
+      ja: "スマホで読み取ってPCに即入力。バーコード・QRスキャナー、入出庫・棚卸しにも。",
+      zh: "用手機掃描，立即輸入到電腦。條碼與 QR Code 掃描器，也支援進出貨與盤點。"
+    }
+  },
+  {
+    id: "baro-barcode-pc",
+    platform: "pc",
+    category: "app",
+    icon: "assets/icons/baro-barcode.png",
+    url: "https://github.com/yj-apps/barobarcode.pc/releases/latest",
+    privacy: "https://sites.google.com/view/yjapps3-barobarcode",
+    langs: ["ko", "en", "ja"],
+    name: { ko: "바로바코드 PC", en: "BaroBarcode PC", ja: "BaroBarcode PC" },
+    desc: {
+      ko: "바로바코드 앱으로 찍은 바코드를 PC의 커서 위치에 바로 입력하는 Windows 프로그램.",
+      en: "A Windows program that types barcodes scanned with the BaroBarcode app right at your cursor.",
+      ja: "BaroBarcodeアプリで読み取ったバーコードを、PCのカーソル位置にそのまま入力するWindowsプログラム。",
+      zh: "將 BaroBarcode 應用程式掃描的條碼直接輸入到電腦游標位置的 Windows 程式。"
     }
   },
   {
