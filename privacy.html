@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — yjapps</title>
+  <link rel="canonical" href="https://yj-apps.github.io/privacy">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="/assets/apps.js" defer></script>
+  <script src="/assets/i18n.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="/"><img class="logo-mark" src="/favicon.svg" alt="">yjapps</a>
+      <div class="lang-toggle" role="group" aria-label="Language" style="margin-left:auto">
+        <button type="button" data-set-lang="ko">KO</button>
+        <button type="button" data-set-lang="en">EN</button>
+        <button type="button" data-set-lang="ja">日本語</button>
+        <button type="button" data-set-lang="zh">中文</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container legal">
+    <h1 data-i18n="privacy.title">개인정보처리방침</h1>
+    <p data-i18n="privacy.intro"></p>
+    <ul id="policy-list" class="policy-list"></ul>
+    <p style="margin-top:28px"><a href="mailto:yjapps3@gmail.com">yjapps3@gmail.com</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© 2026 yjapps</span>
+      <a href="/">yjapps</a>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("yj:lang", function (e) {
+      var list = document.getElementById("policy-list");
+      list.textContent = "";
+      window.YJ_APPS.filter(function (a) { return a.privacy; }).forEach(function (a) {
+        var li = document.createElement("li");
+        var link = document.createElement("a");
+        link.href = a.privacy;
+        link.target = "_blank";
+        link.rel = "noopener";
+        if (/\.(png|jpe?g|webp|svg)$/i.test(a.icon)) {
+          var img = document.createElement("img");
+          img.src = "/" + a.icon;
+          img.alt = "";
+          link.appendChild(img);
+        }
+        link.appendChild(document.createTextNode(a.name[e.detail] || a.name.en));
+        li.appendChild(link);
+        list.appendChild(li);
+      });
+    });
+  </script>
+</body>
+</html>

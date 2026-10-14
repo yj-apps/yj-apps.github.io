@@ -1,13 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>YJApps</title>
+  <title>yjapps</title>
+  <meta name="description" content="yjapps: 심플 사주, 착착 가계부, 심플 나의유형, 스케이트 360, 레트로 던전 고고!, 레트로 메모, 바로 바코드, LiteCAD, PortRadar. Light, fast, easy — mobile apps, games and PC software.">
+  <meta property="og:title" content="yjapps">
+  <meta property="og:description" content="Light, fast, easy — mobile apps, games and PC software.">
+  <meta property="og:url" content="https://yj-apps.github.io/">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://yj-apps.github.io/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="/assets/apps.js" defer></script>
+  <script src="/assets/i18n.js" defer></script>
+  <script src="/assets/main.js" defer></script>
 </head>
 <body>
-  <h1>YJ Apps</h1>
-  <p>안드로이드 앱 개발자 YJApps입니다.</p>
-  <p>문의: yjapps3@gmail.com</p>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="/"><img class="logo-mark" src="/favicon.svg" alt="">yjapps</a>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-set-lang="ko">KO</button>
+        <button type="button" data-set-lang="en">EN</button>
+        <button type="button" data-set-lang="ja">日本語</button>
+        <button type="button" data-set-lang="zh">中文</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h1 data-i18n="hero.title">가볍고, 빠르고, 편하게</h1>
+      <p data-i18n="hero.sub">모바일 앱과 게임, PC 프로그램을 만드는 yjapps입니다.</p>
+    </section>
+
+    <section class="group">
+      <h2 data-i18n="group.app">앱</h2>
+      <div class="list" data-group="app"></div>
+    </section>
+
+    <section class="group">
+      <h2 data-i18n="group.game">게임</h2>
+      <div class="list" data-group="game"></div>
+    </section>
+
+    <section class="group">
+      <h2 data-i18n="group.pc">PC</h2>
+      <div class="list" data-group="pc"></div>
+    </section>
+
+    <noscript><p>심플 사주 · 착착 가계부 · 심플 나의유형 · 스케이트 360 · 레트로 던전 고고! · 레트로 메모 · 바로 바코드 · LiteCAD · PortRadar</p></noscript>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© <span id="year">2026</span> yjapps</span>
+      <span class="footer-links">
+        <a href="mailto:yjapps3@gmail.com">yjapps3@gmail.com</a>
+        <a href="/privacy" data-i18n="footer.privacy">개인정보처리방침</a>
+      </span>
+    </div>
+  </footer>
 </body>
 </html>
